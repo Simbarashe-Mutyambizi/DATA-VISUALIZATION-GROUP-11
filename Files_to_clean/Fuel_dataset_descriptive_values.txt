@@ -1,0 +1,87 @@
+Initial dimensions: rows=82703, columns=20
+
+First 5 rows:
+   Unnamed: 0    FullDate     Brand Name  ... Region Name_encoded Suburb_encoded  Brand Name_encoded
+0           0  2018/04/01    Independent  ...                   0              0                   0
+1           1  2018/04/01  Coles Express  ...                   0              0                   1
+2           2  2018/04/01         United  ...                   0              0                   2
+3           3  2018/04/01    Puma Energy  ...                   0              0                   3
+4           5  2018/04/01  Coles Express  ...                   0              1                   1
+
+[5 rows x 20 columns] 
+
+Info:
+<class 'pandas.DataFrame'>
+RangeIndex: 82703 entries, 0 to 82702
+Data columns (total 20 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   Unnamed: 0           82703 non-null  int64  
+ 1   FullDate             82703 non-null  str    
+ 2   Brand Name           82703 non-null  str    
+ 3   Region Name          82703 non-null  str    
+ 4   Suburb               82703 non-null  str    
+ 5   Postcode             82703 non-null  float64
+ 6   Lat                  82703 non-null  float64
+ 7   Long                 82703 non-null  float64
+ 8   Diesel               82703 non-null  float64
+ 9   Premium 98           82703 non-null  float64
+ 10  Premium 95           82703 non-null  float64
+ 11  Unleaded 91          82703 non-null  float64
+ 12  Premium Diesel       82703 non-null  float64
+ 13  LPG                  82703 non-null  float64
+ 14  Low Aromatic Fuel    82703 non-null  float64
+ 15  Ethanol 105 (E85)    82703 non-null  float64
+ 16  Ethanol 94 (E10)     82703 non-null  float64
+ 17  Region Name_encoded  82703 non-null  int64  
+ 18  Suburb_encoded       82703 non-null  int64  
+ 19  Brand Name_encoded   82703 non-null  int64  
+dtypes: float64(12), int64(4), str(4)
+memory usage: 30.8 MB
+
+Missing values per column (descending):
+No missing values
+
+Total memory usage: 32,287,127 bytes
+
+Numeric columns summary:
+                       count         mean          std  ...         50%          75%          max
+Unnamed: 0           82703.0  3534.207260  2056.597181  ...  3515.00000  5246.000000  7656.000000
+Postcode             82703.0   818.801821     9.825598  ...   820.00000   828.000000   835.000000
+Lat                  82703.0   -12.432036     0.036003  ...   -12.43158   -12.396662   -12.372055
+Long                 82703.0   130.902223     0.051817  ...   130.88528   130.947550   130.990370
+Diesel               82703.0   123.580747    72.983156  ...   143.70000   159.900000   589.700000
+Premium 98           82703.0    91.974419    97.928574  ...     0.00000   184.700000   606.200000
+Premium 95           82703.0   144.187516    60.905375  ...   156.90000   183.500000   592.700000
+Unleaded 91          82703.0   138.699381    49.714687  ...   144.90000   171.900000   586.200000
+Premium Diesel       82703.0    44.475372    75.256693  ...     0.00000   116.900000   242.900000
+LPG                  82703.0    11.914212    36.459421  ...     0.00000     0.000000   189.200000
+Low Aromatic Fuel    82703.0    13.832789    44.849659  ...     0.00000     0.000000   209.900000
+Ethanol 105 (E85)    82703.0     8.927130    41.044556  ...     0.00000     0.000000   249.900000
+Ethanol 94 (E10)     82703.0     9.308478    34.594597  ...     0.00000     0.000000   160.500000
+Region Name_encoded  82703.0     0.228903     0.420129  ...     0.00000     0.000000     1.000000
+Suburb_encoded       82703.0    12.756841     8.007373  ...    13.00000    19.000000    28.000000
+Brand Name_encoded   82703.0     3.792172     2.530159  ...     3.00000     5.000000    14.000000
+
+[16 rows x 8 columns]
+
+Non-numeric columns summary:
+             count unique          top   freq
+FullDate     82703   1852   2023/12/31     88
+Brand Name   82703     15  Puma Energy  19413
+Region Name  82703      2       Darwin  63772
+Suburb       82703     29     Berrimah   7789
+
+Value counts for columns with <=10 unique values:
+
+Column: Region Name
+Region Name
+Darwin        63772
+Palmerston    18931
+Name: count, dtype: int64
+
+Column: Region Name_encoded
+Region Name_encoded
+0    63772
+1    18931
+Name: count, dtype: int64
