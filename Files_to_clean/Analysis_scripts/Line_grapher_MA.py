@@ -61,7 +61,8 @@ def plot_columns_moving_average_subplots(
 
     plt.tight_layout()
     plt.show()
+    fig.savefig('Fuel_Price_Moving_Average.png')
     return fig, axes
 
 df = pd.read_csv("combined_fuel_price.csv")
-plot_columns_moving_average_subplots(df, ['Diesel','Premium 95','Unleaded 91','Ethanol 105 (E85)'], window=1000)
+plot_columns_moving_average_subplots(df, ['Diesel','Premium 95','Unleaded 91','Premium 98'], window=1000)

@@ -54,11 +54,12 @@ def multicollinearity_matrix(df: pd.DataFrame,
     plt.yticks(rotation=0)
     plt.tight_layout()
     plt.show()
-    fig.savefig('Multi_corr_bike.png')
+    fig.savefig('Multi_corr_Encoded_fuel.png')
     return corr, fig, ax
 
 
-df = pd.read_csv("Filtered_columns_V2.csv")
+df = pd.read_csv("Encoded_fuel_price.csv")
+df = df.drop(columns=['Region Name', 'Suburb','Bio Diesel 20'])
 corr, fig, ax = multicollinearity_matrix(df, include_non_numeric=False, method="pearson")
 print(corr) 
 
