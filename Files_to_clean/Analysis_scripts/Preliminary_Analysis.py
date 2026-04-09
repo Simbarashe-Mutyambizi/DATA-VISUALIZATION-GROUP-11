@@ -65,4 +65,4 @@ def describe_dataframe(path, **read_kwargs):
 if __name__ == "__main__":
     # example usage: adjust path to your file
 
-    df = describe_dataframe("combined_bike.csv")
+    df = describe_dataframe("Files_to_clean\cleaned_combined_bike.csv")

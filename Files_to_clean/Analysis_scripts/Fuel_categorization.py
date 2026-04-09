@@ -9,14 +9,14 @@ def filter_regions(df: pd.DataFrame, keep=('Darwin', 'Palmerston')) -> pd.DataFr
     """
     return df[df['Region Name'].isin(keep)].copy()
 
-# df = pd.read_csv(r"Files_to_clean/filtered_fuel_price.csv")
+# df = pd.read_csv(r"C:\Personal\Masters\Masters_work\Study\Y1_S2\PRT564\Assignments\Assignment_2\Repo\DATA-VISUALIZATION-GROUP-11\Files_to_clean\cleaned_combined_fuel_price.csv")
 # filtered = filter_regions(df)
 # print(filtered.head())
-# filtered.to_csv(r"Files_to_clean\filtered_fuel_price.csv", index=False)
+# filtered.to_csv(r"C:\Personal\Masters\Masters_work\Study\Y1_S2\PRT564\Assignments\Assignment_2\Repo\DATA-VISUALIZATION-GROUP-11\Files_to_clean\Encoded_cleaned_fuel_price.csv", index=False)
 
 # %%
 
-df = pd.read_csv(r"C:\Personal\Masters\Masters_work\Study\Y1_S2\PRT564\Assignments\Assignment_2\Repo\DATA-VISUALIZATION-GROUP-11\Files_to_clean\filtered_fuel_price_DP.csv")
+df = pd.read_csv(r"Files_to_clean/cleaned_combined_fuel_price_DP.csv")
 
 def encode_columns_categories(
     df: pd.DataFrame,
@@ -51,4 +51,4 @@ encoded_df, maps = encode_columns_categories(df, ['Region Name','Suburb','Brand 
 print(encoded_df)
 print(maps)
 #%%
-encoded_df.to_csv(r"Encoded_fuel_price.csv", index=False)
+encoded_df.to_csv(r"Enc_fuel_price.csv", index=False)
