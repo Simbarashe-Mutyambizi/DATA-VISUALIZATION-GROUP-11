@@ -1,20 +1,19 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
+vals = [0.629]
+names = ["Trips/Hour"]
+x = np.arange(len(vals))            # [0]
+bar_width = 0.2                     # make smaller
 
-def plot_bar(values, labels, title=None, ylabel=None, figsize=(8,4)):
-    fig, ax = plt.subplots(figsize=figsize)
-    ax.bar(labels, values)
-    ax.set_xticklabels(labels, rotation=45, ha="right")
-    if title: ax.set_title(title)
-    if ylabel: ax.set_ylabel(ylabel)
-    plt.tight_layout()
-    return fig, ax
+fig, ax = plt.subplots()
+ax.bar(x, vals, width=bar_width, color="C0")
+ax.set_xticks(x)
+ax.set_xticklabels(names)
 
-# For Initial attempt
-
-if __name__ == "__main__":
-    vals = [0.195, 0.082, 0.246, 0.083]
-    names = ["Unleaded_91", "Diesel", "Premium 95","Premium 98"]
-    fig, ax = plot_bar(vals, names, title="R²(test) Comparison between fuel types", ylabel="R²")
-    fig.savefig("R2_comparison_amongst_fuel_types.png", dpi=1000) 
-    plt.show()
+# restrict x-limits so bar is centered and narrow on the axis
+ax.set_xlim(-0.5, 0.5)              # adjust to taste; narrower range -> bar appears narrower
+ax.set_ylim(0, 0.7)
+ax.set_ylabel("R²")
+ax.set_title("R²(test) Bike")
+plt.show()
